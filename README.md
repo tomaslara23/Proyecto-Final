@@ -10,10 +10,10 @@ Queremos hacer un modelo capaz de clasificar pokemons por imagen. La idea es sub
 **Dataset**: Usaremos un dataset descargado de kaggle que contiene imágenes de pokemon, además contiene un archivo que también contiene los nombre de los pokemon y sus tipos.
 
 
-**Modelo**: Usaremos una red CNN, basada en la subida en el práctico 1. Usaremos grad-CAM para interpretar las zonas de la imagen que la redutiliza para realizar su predicción. Seleccionaremos la última capa convolucional, calcularemos el gradiente de la clase objetivo, promediaremos los gradiente por canal, ponderaremos los feature maps por estos pesos, aplicaremos ReLU, por último generaremos un heatmap que mostrará las zonas más relevantes de la imágen.
+**Modelo**: Usaremos una red CNN, basada en la subida en el práctico 3. El modelo entrenado con un dataset compuesto de imágenes de los 150 pokemon originales, haremos transfer learning para que en la parte de testeo puedas cargar la imagen del pokemon que deseas identificar. La imagen se convertirá en tensores, que posteriormente se le entregarán al modelo para hacer su predicción.
 
 
-**Evaluación del modelo**: Para evaluar el modelo vamos a usar "Accuracy" y "Matriz de confusión". Más que nada porque son herramientas estándar para evaluar los modelos.
+**Evaluación del modelo**: Para evaluar el modelo vamos a usar "Accuracy" y "Loss Over Epochs". Más que nada porque son herramientas estándar para evaluar los modelos.
 
 [Data set : ](https://www.kaggle.com/datasets/lantian773030/pokemonclassification)
 
